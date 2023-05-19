@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $message = "Email: $email\n\nQuestion: $question";
 
   // Set the recipient email address
-  $to = 'your-email@example.com';
+  $to = 'ovsquared@icloud.com';
 
   // Set additional headers
   $headers = "From: $email\r\n";
