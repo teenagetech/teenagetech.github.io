@@ -24,25 +24,120 @@
 <br>
 <br>
 <main>
-<h1>contact</h1>
 <form>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<style>
+body {
+  background-color: #df6d6d;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+.form-control {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: inherit;
+}
+select.form-control  {
+  height: 3em;
+}
+.form-check-label {
+  font-weight: normal;
+}
+input[type="checkbox"], input[type=radio] {
+    vertical-align: top;
+    transform: scale(1.5);
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.text-muted {
+  color: #333333;
+  filter: brightness(150%)
+}
+.btn {
+  font-size: 1em;
+}
+.btn-primary {
+  color: #000000;
+  background-color: #77a6b4;
+  border-color: #df6d6d;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover {
+  color: #000000;
+  background-color: #77a6b4;
+  border-color: #df6d6d;
+  filter: brightness(.80);
+}
+h1,.h1 {
+  font-size: 3.33em;
+  font-weight: bold;
+}
+h2,.h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+h3,.h3 {
+  font-size: 1.95em;
+}
+h4,.h4 {
+  font-size: 1.67em;
+}
+h5,.h5 {
+  font-size: 1.38em;
+}
+h6,.h6 {
+  font-size: 1.12em;
+}
+</style>
 <div class="container">
   <div class="row">
     <section class="container col-xs-12 col-sm-8 col-sm-offset-2 col-xl-6 col-xl-offset-3 my-4">
         <div class="container" style="width:100%">
         <form class="" target="_self" enctype="multipart/form-data" action="https://formkeep.com/f/38299059bb45" accept-charset="UTF-8" method="post">
           <fieldset>
-            <center><h2>Empty Form</h2></center>
+            <center><h2>contact</h2></center>
             <br>
+              <div class="row">
+              <div class="form-group col-xs-12" id="name__div">
+              <label title="required" for="name">name *</label>
+              <input type="text" name="name" id="name" value="john appleseed" required="required" maxlength="50" autofocus="autofocus" class="form-control" />
+              <small class="form-text text-muted">enter your name</small>
+          </div>
+          </div>
+              <div class="row">
+              <div class="form-group col-xs-12" id="email__div">
+              <label title="required" for="email">email *</label>
+              <input type="email" name="email" id="email" value="hello@example.com" required="required" maxlength="50" class="form-control" />
+              <small class="form-text text-muted">enter your email address</small>
+          </div>
+          </div>
+              <div class="row">
+              <div class="form-group col-xs-12" id="question__div">
+              <label title="required" for="question">question *</label>
+              <textarea name="question" id="question" required="required" maxlength="2000" class="form-control">
+blah blah blah</textarea>
+              <small class="form-text text-muted">enter your question</small>
+          </div>
+          </div>
           <br>
           <div style="opacity:0;position:absolute;top:0;left:-5000px;height:0;width:0">
             <label for="subscribe_38299059bb45_42403"></label>
             <input name="subscribe_38299059bb45_42403" value="" tabindex="-1" autocomplete="off"
                    type="email" id="email_subscribe_38299059bb45_42403" placeholder="Your email here">
           </div>
-          <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="" autocomplete="off" />
           <div class="row">
             <div class="col-xs-12">
               <input type="submit" value="Submit" class="btn btn-block btn-primary" data-disable-with="Submit" />
@@ -52,7 +147,7 @@
 </form>
         <div style='text-align: center; padding-top: 6rem; padding-bottom: 3rem'>
           <a style="color: #868190; line-height: 0 !important; padding: 3px; text-decoration:none; font-size:1em" target="_blank" rel="noopener noreferrer" href="https://formkeep.com/?utm_campaign=38299059bb45&amp;utm_medium=web&amp;utm_source=formkeep-landingpage-free">
-            Free forms by FormKeep &nbsp;
+            &nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" aria-labelledby="formkeep-logo__title" role="img" style="fill: #868190; width: 3rem; margin-bottom: 3px; vertical-align: middle;">
   <title id="formkeep-logo__title">FormKeep</title>
   <g class="formkeep-logo__mark">
@@ -65,6 +160,7 @@
     </section>
   </div>
 </div>
+
 </form>
 <p>submit the email and i will respond as soon as possible. thanks!</p>
 </main>
