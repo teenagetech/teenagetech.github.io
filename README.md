@@ -1,2 +1,2 @@
-https://teenage-technology.github.io/-/
+https://teenagetech.github.io/
 teenage.technology website.
