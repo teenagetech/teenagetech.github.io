@@ -1,4 +1,3 @@
-// header.js
 document.addEventListener("DOMContentLoaded", function () {
     var headerContainer = document.getElementById("header-container");
     fetch("header.html")
