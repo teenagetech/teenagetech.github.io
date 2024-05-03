@@ -11,6 +11,11 @@ body {
 }
 html {
     scroll-behavior: smooth;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: #df6d6d;
 }
 header {
     background-color: rgba(0, 0, 0, 0.7);
