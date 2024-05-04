@@ -9,7 +9,7 @@ function refreshAnimation() {
 
   const particles = [];
   const particleCount = 100;
-  const particleSize = 15;
+  const particleSize = 20;
 
   for (let i = 0; i < particleCount; i++) {
     const particle = {

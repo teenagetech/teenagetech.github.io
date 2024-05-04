@@ -1,21 +1,24 @@
 @font-face {
-    font-family: 'Produkt Light';
-    src: url('/ProduktLight.ttf') format('truetype');
+    font-family: 'Tenor Sans';
+    src: url('/TenorSans-Regular.ttf') format('truetype');
 }
 body {
-    font-family: 'Produkt Light', 'slab-serif';
+    font-family: 'Tenor Sans', 'sans-serif';
     margin: 0;
     padding: 0;
     background-color: #df6d6d;
     text-decoration: none;
 }
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     text-decoration: none;
 }
 a {
     text-decoration: none;
     color: #df6d6d;
+}
+p {
+    font-size: 18px;
 }
 header {
     background-color: rgba(0, 0, 0, 0.7);
@@ -25,7 +28,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 6;
 }
 
 header nav ul {
@@ -57,29 +60,56 @@ main {
     justify-content: center;  
 }
 
+.table {
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-collapse: collapse;
+    margin: 10px auto;
+    font-size: 20px;
+    min-width: 300px;
+}
+.table th, .table td {
+    padding: 4px 10px;
+}
+tr {
+    border-bottom: 1px solid #FFFFFF;
+}
+
 .dropdown {
 position: relative;
-display: inline-block;
+display: flexbox;
+text-align: center;
 }
 
 .dropdown-content {
+text-align: center;
+border-radius: 5px;
 display: none;
 position: absolute;
 background-color: #77a6b4;
-padding: 10px;
-min-width: 200px;
+padding: 4px;
+min-width: 161px;
 z-index: 3;
 }
 
 .dropdown-content a {
 color: #fff;
 text-decoration: none;
-display: block;
-padding: 10px;
+display: flex;
+padding: 4px;
+text-align: center;
 }
-
+.dropdown-content a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    text-align: center;
+}
 .dropdown:hover .dropdown-content {
 display: block;
+text-align: center;
 }
 
 footer {
@@ -102,11 +132,6 @@ width: 100%;
 height: 100%;
 z-index: -1;
 }
-button {
-    background-color: #77a6b4;
-    border: none;
-    border-radius: 30px;
-}
 .background-animation canvas {
 display: block;
 position: fixed;
@@ -119,7 +144,7 @@ pointer-events: none;
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+
 }
 
 main {
