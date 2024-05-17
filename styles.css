@@ -104,6 +104,10 @@ display: flex;
 padding: 4px;
 text-align: center;
 }
+#logo {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
 .dropdown-content a:hover {
     background-color: #000000;
     border-radius: 5px;
