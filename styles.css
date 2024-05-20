@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Tenor Sans';
-    src: url('/TenorSans-Regular.ttf') format('truetype');
+    src: url('/Avenir\ Next.ttc') format('truetype collection');
 }
 body {
-    font-family: 'Tenor Sans', 'sans-serif';
+    font-family: 'Avenir Next', 'sans-serif';
     margin: 0;
     padding: 0;
     background-color: #df6d6d;
@@ -93,7 +93,7 @@ display: none;
 position: absolute;
 background-color: #77a6b4;
 padding: 4px;
-min-width: 161px;
+min-width: 157px;
 z-index: 3;
 }
 
