@@ -6,8 +6,9 @@ body {
     font-family: 'Avenir Next', 'sans-serif';
     margin: 0;
     padding: 0;
-    background-color: #df6d6d;
+    background-color: #171717;
     text-decoration: none;
+    color: #df6d6d;
 }
 html {
     scroll-behavior: smooth !important;
@@ -87,16 +88,41 @@ text-align: center;
 }
 
 .dropdown-content {
+background: linear-gradient(45deg, #df6d6d, #77a6b4);
+animation: headerAnimation 5s infinite;
 text-align: center;
 border-radius: 5px;
 display: none;
 position: absolute;
-background-color: #77a6b4;
 padding: 4px;
 min-width: 157px;
 z-index: 3;
 }
-
+header {
+    background: linear-gradient(45deg, #df6d6d, #77a6b4);
+    animation: headerAnimation 10s infinite;
+    background-size: 400% 400%;
+  }
+  
+  footer {
+    background: linear-gradient(45deg, #555555, #777777);
+    animation: footerAnimation 10s infinite;
+    background-size: 400% 400%;
+  }
+  
+  /* Header animation */
+  @keyframes headerAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Footer animation */
+  @keyframes footerAnimation {
+    0% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
 .dropdown-content a {
 color: #fff;
 text-decoration: none;
@@ -105,7 +131,7 @@ padding: 4px;
 text-align: center;
 }
 .dropdown-content a:hover {
-    background-color: #000000;
+    background-color: #00000074;
     border-radius: 5px;
     text-align: center;
 }
@@ -126,22 +152,6 @@ footer {
     text-align: center;
     z-index: 3;
 }
-.background-animation {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1;
-}
-.background-animation canvas {
-display: block;
-position: fixed;
-top: 0;
-left: 0;
-pointer-events: none;
-}
-
 
 body {
     display: flex;
