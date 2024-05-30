@@ -10,6 +10,12 @@ body {
     text-decoration: none;
     color: #df6d6d;
 }
+input, button {
+    font-family: 'Avenir Next', 'sans-serif';
+}
+.title{
+    font-size: 30px;
+}
 html {
     scroll-behavior: smooth !important;
     text-decoration: none;
@@ -22,7 +28,6 @@ p {
     font-size: 18px;
 }
 header {
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     color: #000000;
     position: fixed;
@@ -30,6 +35,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
 }
 
 header nav ul  a {
@@ -88,8 +94,10 @@ text-align: center;
 }
 
 .dropdown-content {
+box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
 background: linear-gradient(45deg, #df6d6d, #77a6b4);
 animation: headerAnimation 5s infinite;
+background-size: 200% 200%;
 text-align: center;
 border-radius: 5px;
 display: none;
@@ -98,6 +106,17 @@ padding: 4px;
 min-width: 157px;
 z-index: 3;
 }
+.subscribe{
+    background: linear-gradient(45deg, #df6d6d, #77a6b4);
+    animation: headerAnimation 10s infinite;
+    background-size: 400% 400%;
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
 header {
     background: linear-gradient(45deg, #df6d6d, #77a6b4);
     animation: headerAnimation 10s infinite;
@@ -105,19 +124,18 @@ header {
   }
   
   footer {
-    background: linear-gradient(45deg, #555555, #777777);
+    color: #fff;
+    background: linear-gradient(45deg, #444444, #777777);
     animation: footerAnimation 10s infinite;
     background-size: 400% 400%;
   }
-  
-  /* Header animation */
+
   @keyframes headerAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
-  
-  /* Footer animation */
+
   @keyframes footerAnimation {
     0% { background-position: 100% 50%; }
     50% { background-position: 0% 50%; }
@@ -151,6 +169,7 @@ footer {
     justify-content: center;
     text-align: center;
     z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
 }
 
 body {
