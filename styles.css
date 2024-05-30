@@ -12,6 +12,7 @@ body {
 }
 input, button {
     font-family: 'Avenir Next', 'sans-serif';
+    text-align: center;
 }
 .title{
     font-size: 30px;
