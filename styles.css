@@ -20,6 +20,7 @@ input, button {
 html {
     scroll-behavior: smooth !important;
     text-decoration: none;
+    background-color: #171717;
 }
 a {
     text-decoration: none;
