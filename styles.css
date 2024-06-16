@@ -16,6 +16,7 @@ input, button {
 }
 .video {
     width: 80vw;
+    border-radius: 10px;
 }
 .title{
     font-size: 30px;
