@@ -26,6 +26,9 @@ a {
     text-decoration: none;
     color: #df6d6d;
 }
+a :hover {
+    cursor: pointer;
+}
 p {
     font-size: 18px;
 }
