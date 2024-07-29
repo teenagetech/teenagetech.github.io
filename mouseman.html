@@ -122,12 +122,139 @@
 <script src="https://static-cdn.play.date/static/shared/js/shared.6c7bc8f7e55b.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://static-cdn.play.date/static/pulp/js/player/bridge.dac594be54b1.js?timestamp=1674579611" type="text/javascript" charset="utf-8"></script>
 <script src="https://static-cdn.play.date/static/pulp/js/player/runtime.14dfcdc1cffc.js?timestamp=1674579611" type="text/javascript" charset="utf-8"></script>
+<style>
+	.dropdown {
+	position: relative;
+	display: flexbox;
+	text-align: center;
+	}
+	
+	.dropdown-content {
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+	background: linear-gradient(45deg, #df6d6d, #77a6b4);
+	animation: headerAnimation 5s infinite;
+	background-size: 200% 200%;
+	text-align: center;
+	border-radius: 5px;
+	display: none;
+	position: absolute;
+	animation: fadeIn 0.75s;
+	padding: 4px;
+	min-width: 157px;
+	z-index: 3;
+	}
+	.subscribe{
+		background: linear-gradient(45deg, #df6d6d, #77a6b4);
+		animation: headerAnimation 10s infinite;
+		background-size: 400% 400%;
+		border: none;
+		border-radius: 30px;
+		height: 30px;
+		font-size: 18px;
+		cursor: pointer;
+		text-align: center;
+		color: #000000;
+	}
+	p, h1, h2, h3, h4, h5, h6 {
+		cursor: default;
+	}
+	header {
+		font-family: "Avenir Next", sans-serif;
+		background: linear-gradient(45deg, #df6d6d, #77a6b4);
+		animation: headerAnimation 10s infinite;
+		background-size: 400% 400%;
+	  }
+	  header > nav > ul > li > a {
+		animation: fadeIn 0.75s;
+	  }
+	  footer > p {
+		animation: fadeIn 0.75s;
+	  }
+	  
+	  footer {
+		color: #fff;
+		background: linear-gradient(45deg, #363636, #777777);
+		animation: footerAnimation 10s infinite;
+		background-size: 400% 400%;
+	  }
+	
+	  @keyframes headerAnimation {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	  }
+	
+	  @keyframes footerAnimation {
+		0% { background-position: 100% 50%; }
+		50% { background-position: 0% 50%; }
+		100% { background-position: 100% 50%; }
+	  }
+	  @keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	  }
+	.dropdown-content a {
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	padding: 4px;
+	text-align: center;
+	}
+	.dropdown-content a:hover {
+		background-color: #00000074;
+		border-radius: 5px;
+		text-align: center;
+	}
+	.dropdown:hover .dropdown-content {
+	display: block;
+	text-align: center;
+	}
+	header {
+    height: 22px;
+    padding: 10px;
+    color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+}
 
+header nav ul  a {
+    margin-right: 20px;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
 
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+main {
+    text-align: center;
+    padding: 80px 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+</style>
 
 </head>
 <body class="nojs pulp theme scrollable " data-mode="dark">
-	<div class="header-container"></div>
 <noscript class="js-warning">
     <p>
         
@@ -135,7 +262,7 @@
         
     </p>
 </noscript>
-
+<div id="header-container"></div>
 <div id="ui">
 	<div id="game" class="playdate"></div>
 	<div id="controller">
@@ -725,16 +852,6 @@
 
 
     </main>
-    
-
-    
-<footer id="custom-footer">
-	<ul>
-		<li>
-			Copied from the Playdate Pulp Player and modified. Everything besides the game is Panic's.</a>.
-		</li>
-	</ul>
-</footer>
 <footer id="panic-footer">
     <ul>
         <li>
@@ -781,8 +898,6 @@
         }
     </script>
   <script src="header.js"></script>
-  <script type="module" src="firebaseconfig.js"></script>    
-
-
+  <script type="module" src="firebaseconfig.js"></script>
 </body>
 </html>
