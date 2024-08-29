@@ -13,6 +13,12 @@
             background-color: #171717;
             color: #FFFFFF;
         }
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .dload {
             background-color: #e0e0e0;
             color: #77a6b4;
@@ -71,7 +77,7 @@
             <br>
             <img src="word clock screen.png" alt="a screenshot showing word clock at work in the safari web browser. in a popup window below the word clock icon in the safari toolbar, it reads 'it's seven forty-nine on monday, august twenty-sixth.'" class="screenshot">
             <br><br><br>
-            
+            <div class="btn">
             <a href="word clock.app.zip" download class="dload" id="download-safari">
                 <img src="safari.png" alt="safari" class="icon">
                 <b>download word clock for safari</b>
@@ -92,7 +98,7 @@
                 <img src="brave.png" alt="brave" class="icon">
                 <b>download word clock for brave</b>
             </a> 
-            
+            </div>
             <br><br>
             <button class="show-more-btn" onclick="showAllDownloads()">show other downloads</button>
 
