@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "word clock",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "word clock is a tiny little extension for chrome. tell the time with a click.",
+        "description": "Description of what the extension does."
+    }
+}

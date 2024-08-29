@@ -1,0 +1,37 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 20px 20px;
+    font-family: system-ui;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: #CFBE31;
+    background: #ffffffda;
+    border: none;
+    border-radius: 20px;
+}
+
+#wordClock {
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #222222da;
+    }
+
+    #wordClock {
+        color: #F3DE2C;
+    }
+}
