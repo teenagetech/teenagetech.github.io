@@ -17,20 +17,25 @@
             background-color: #e0e0e0;
             color: #77a6b4;
             border-radius: 10px;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            padding-left: 8px;
-            padding-right: 8px;
+            padding: 10px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             font-size: 16px;
             margin: 5px 0;
+            margin-bottom: 15px;
             transition: background-color 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 0.7s ease-out;
+        }
+        .dload.show {
+            opacity: 1;
+            transform: translateY(0);
         }
         .dload:hover {
             background-color: #df6d6d;
-            color:#e0e0e0
+            color: #e0e0e0;
         }
         .dload img.icon {
             height: 40px;
@@ -41,6 +46,19 @@
         }
         main {
             text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .show-more-btn {
+            background-color: #77a6b4;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -53,45 +71,103 @@
             <br>
             <img src="word clock screen.png" alt="a screenshot showing word clock at work in the safari web browser. in a popup window below the word clock icon in the safari toolbar, it reads 'it's seven forty-nine on monday, august twenty-sixth.'" class="screenshot">
             <br><br><br>
-            <a href="word clock.app.zip" download class="dload">
+            
+            <a href="word clock.app.zip" download class="dload" id="download-safari">
                 <img src="safari.png" alt="safari" class="icon">
                 <b>download word clock for safari</b>
             </a>
-            <br><br>
-            <a href="word clock chrome.zip" download class="dload">
+            <a href="word clock chrome.zip" download class="dload" id="download-chrome">
                 <img src="chrome.png" alt="chrome" class="icon">
                 <b>download word clock for chrome</b>
             </a>
-            <br><br>
-            <a href="word clock edge.zip" download class="dload">
+            <a href="word clock edge.zip" download class="dload" id="download-edge">
                 <img src="edge.png" alt="edge" class="icon">
                 <b>download word clock for edge</b>
             </a>
-            <br><br>
-            <a href="word clock opera.zip" download class="dload">
+            <a href="word clock opera.zip" download class="dload" id="download-opera">
                 <img src="opera.png" alt="opera" class="icon">
                 <b>download word clock for opera</b>
             </a>
-            <br><br>
-            <a href="word clock brave.zip" download class="dload">
+            <a href="word clock brave.zip" download class="dload" id="download-brave">
                 <img src="brave.png" alt="brave" class="icon">
                 <b>download word clock for brave</b>
-            </a>
-            <br><br><br><br>
+            </a> 
+            
+            <br><br>
+            <button class="show-more-btn" onclick="showAllDownloads()">show other downloads</button>
+
+            <br><br><br>
             <h2>to install word clock on macOS for safari:</h2>
-            <p>drag the <b>word clock.app</b> file you downloaded into your applications folder.<br>
-            Next, control-click (right-click) on <b>word clock.app</b> and select "open anyway" if prompted to launch word clock and follow the steps in the app to install it as a Safari extension.</p>
+            <p>first, unzip the <b>word clock.app.zip</b> file by double clicking on it,
+                <br>then drag the <b>word clock.app</b> file you unzipped into your applications folder.<br>
+            next, control-click (right-click) on <b>word clock.app</b> and select "open anyway" if prompted to launch word clock and follow the steps in the app to install it as a safari extension.</p>
             <h2>to install word clock on chrome, edge, opera, or brave:</h2>
-            <p>Download the respective file for your browser,<br>then open your extensions page on Chrome, Edge, Opera, or Brave.
-                <br>(This is typically done by typing your browser name,<br>then <b>://extensions</b>, as in <b>chrome://extensions</b>), or by opening<br>your browser's sidebar and selecting <b>Extensions</b> from the drop-down menu.
-                <br>Enable developer mode (temporarily) and drag and drop the<br>word clock folder into the extensions page.<br>
-                <br>You can safely disable developer mode once word clock is installed.<br>Your browser might show an alert, saying that it<br>"can't verify where this extension comes from",<br>but you can silence it by clicking the three dots
-                <br>next to the alert and selecting <b>keep this extension</b>.<br><br>Last but not least, turn word clock on,<br>pin it to your toolbar for the best experience, and tell the time with a click.</p>
+            <p>download the respective file for your browser and unzip it,<br>then open your extensions page on chrome, edge, opera, or brave.
+                <br>(this is typically done by typing your browser name,<br>then <b>://extensions</b>, as in <b>chrome://extensions</b>), or by opening<br>your browser's sidebar and selecting <b>extensions</b> from the drop-down menu.
+                <br>enable developer mode (temporarily) and drag and drop the<br>word clock folder into the extensions page.<br>
+                <br>you can safely disable developer mode once word clock is installed.<br>your browser might show an alert, saying that it<br>"can't verify where this extension comes from",<br>but you can silence it by clicking the three dots
+                <br>next to the alert and selecting <b>keep this extension</b>.<br><br>last but not least, turn word clock on,<br>pin it to your browser's toolbar for the best experience, and tell the time with a click.</p>
         </div>
     </main>
     <footer>
         <p>&copy; Teenage Tech. All rights reserved.</p>
     </footer>
+    <script>
+        function detectBrowser() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var safari = document.getElementById('download-safari');
+            var chrome = document.getElementById('download-chrome');
+            var edge = document.getElementById('download-edge');
+            var opera = document.getElementById('download-opera');
+            var brave = document.getElementById('download-brave');
+
+            safari.classList.add('hidden');
+            chrome.classList.add('hidden');
+            edge.classList.add('hidden');
+            opera.classList.add('hidden');
+            brave.classList.add('hidden');
+
+            if (userAgent.indexOf('safari') > -1 && userAgent.indexOf('chrome') === -1) {
+                safari.classList.remove('hidden');
+            } else if (userAgent.indexOf('chrome') > -1 && userAgent.indexOf('edg') === -1) {
+                chrome.classList.remove('hidden');
+            } else if (userAgent.indexOf('edg') > -1) {
+                edge.classList.remove('hidden');
+            } else if (userAgent.indexOf('opera') > -1 || userAgent.indexOf('opr') > -1) {
+                opera.classList.remove('hidden');
+            } else if (userAgent.indexOf('brave') > -1) {
+                brave.classList.remove('hidden');
+            }
+        }
+
+        function showAllDownloads() {
+            var downloadButtons = document.querySelectorAll('.dload');
+            downloadButtons.forEach(button => {
+                button.classList.remove('hidden');
+                button.classList.add('show');
+            });
+            document.querySelector('.show-more-btn').style.display = 'none';
+        }
+        window.onload = function() {
+            detectBrowser();
+            var downloadButtons = document.querySelectorAll('.dload');
+            var options = {
+                threshold: 0.5
+            };
+            var observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            downloadButtons.forEach(button => {
+                observer.observe(button);
+            });
+        };
+    </script>
     <script src="header.js"></script>
     <script src="firebaseconfig.js"></script>
 </body>
