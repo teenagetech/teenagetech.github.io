@@ -73,7 +73,7 @@
     <main>
         <div>
             <img src="word clock.png" alt="" width="400" height="400">
-            <h2>word clock is a tiny little extension for safari, chrome, edge, opera, and brave. tell the time with a click.</h2>
+            <h2>word clock is a tiny little extension for safari, chrome, edge, opera, firefox, and brave. tell the time with a click.</h2>
             <br>
             <img src="word clock screen.png" alt="a screenshot showing word clock at work in the safari web browser. in a popup window below the word clock icon in the safari toolbar, it reads 'it's seven forty-nine on monday, august twenty-sixth.'" class="screenshot">
             <br><br><br>
@@ -97,6 +97,10 @@
             <a href="word clock brave.zip" download class="dload" id="download-brave">
                 <img src="brave.png" alt="brave" class="icon">
                 <b>download word clock for brave</b>
+            </a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/word-clock/" class="dload" id="download-firefox">
+                <img src="firefox.png" alt="firefox" class="icon">
+                <b>get word clock for firefox</b>
             </a> 
             </div>
             <br><br>
@@ -127,18 +131,21 @@
             var edge = document.getElementById('download-edge');
             var opera = document.getElementById('download-opera');
             var brave = document.getElementById('download-brave');
+            var firefox = document.getElementById('download-firefox');
     
             safari.classList.add('hidden');
             chrome.classList.add('hidden');
             edge.classList.add('hidden');
             opera.classList.add('hidden');
             brave.classList.add('hidden');
+            firefox.classList.add('hidden');
     
             var isOpera = (userAgent.includes('opera') || userAgent.includes('opr')) || (!!window.opr && !!opr.addons);
             var isEdgeChromium = userAgent.includes('edg');
             var isBrave = (navigator.brave && navigator.brave.isBrave) || userAgent.includes('brave');
             var isSafari = userAgent.includes('safari') && !userAgent.includes('chrome');
             var isChrome = userAgent.includes('chrome') && !isOpera && !isEdgeChromium && !isBrave;
+            var isFirefox = userAgent.includes('firefox') && !isOpera && !isEdgeChromium && !isBrave && !isChrome;
     
             if (isSafari) {
                 safari.classList.remove('hidden');
@@ -150,6 +157,9 @@
                 opera.classList.remove('hidden');
             } else if (isBrave) {
                 brave.classList.remove('hidden');
+            }
+            else if (isFirefox) {
+                firefox.classList.remove('hidden');
             }
         }
     
