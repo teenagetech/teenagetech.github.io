@@ -128,21 +128,18 @@
             var opera = document.getElementById('download-opera');
             var brave = document.getElementById('download-brave');
     
-            // Hide all download buttons initially
             safari.classList.add('hidden');
             chrome.classList.add('hidden');
             edge.classList.add('hidden');
             opera.classList.add('hidden');
             brave.classList.add('hidden');
     
-            // Browser detection logic
             var isOpera = (userAgent.includes('opera') || userAgent.includes('opr')) || (!!window.opr && !!opr.addons);
             var isEdgeChromium = userAgent.includes('edg');
             var isBrave = (navigator.brave && navigator.brave.isBrave) || userAgent.includes('brave');
             var isSafari = userAgent.includes('safari') && !userAgent.includes('chrome');
             var isChrome = userAgent.includes('chrome') && !isOpera && !isEdgeChromium && !isBrave;
     
-            // Set visibility based on detection
             if (isSafari) {
                 safari.classList.remove('hidden');
             } else if (isChrome) {
