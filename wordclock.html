@@ -135,12 +135,12 @@
             brave.classList.add('hidden');
     
             // Browser detection logic
-            var isOpera = (userAgent.indexOf('opera') > -1 || userAgent.indexOf('opr') > -1);
-            var isEdgeChromium = userAgent.indexOf('edg') > -1;
+            var isOpera = (userAgent.includes('opera') || userAgent.includes('opr')) || (!!window.opr && !!opr.addons);
+            var isEdgeChromium = userAgent.includes('edg');
             var isBrave = (navigator.brave && navigator.brave.isBrave) || userAgent.includes('brave');
-            var isSafari = userAgent.indexOf('safari') > -1 && userAgent.indexOf('chrome') === -1;
-            var isChrome = userAgent.indexOf('chrome') > -1 && !isOpera && !isEdgeChromium && !isBrave;
-            
+            var isSafari = userAgent.includes('safari') && !userAgent.includes('chrome');
+            var isChrome = userAgent.includes('chrome') && !isOpera && !isEdgeChromium && !isBrave;
+    
             // Set visibility based on detection
             if (isSafari) {
                 safari.classList.remove('hidden');
@@ -183,8 +183,7 @@
                 observer.observe(button);
             });
         };
-    </script>
-    
+    </script>    
     <script src="header.js"></script>
     <script src="firebaseconfig.js"></script>
 </body>
