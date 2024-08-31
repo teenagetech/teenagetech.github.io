@@ -1,4 +1,3 @@
-// firebaseconfig.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
 
@@ -12,8 +11,7 @@ const firebaseConfig = {
   measurementId: "G-N7Q05TGCJ6"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-export { app, analytics };  // Exporting for ES module purposes, even if not used
+export { app, analytics };

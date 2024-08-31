@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" draggable="false">
+
 <head>
     <link rel="icon" href="wordclock.png" type="image/x-icon">
     <meta charset="UTF-8">
-    <meta name="description" content="word clock is a tiny little extension for safari, chrome, edge, and opera. tell the time with a click.">
-    <meta name="keywords" content="word clock, extension, fun%20extension, word%20clock, character%20clock, character clock, safari, chrome, firefox, edge, brave">
+    <meta name="description"
+        content="word clock is a tiny little extension for safari, chrome, edge, and opera. tell the time with a click.">
+    <meta name="keywords"
+        content="word clock, extension, fun%20extension, word%20clock, character%20clock, character clock, safari, chrome, firefox, edge, brave">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>word clock | Teenage Tech</title>
     <link rel="stylesheet" href="styles.css">
@@ -13,11 +16,12 @@
             background-color: #171717;
             color: #FFFFFF;
         }
+
         .btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .dload {
             background-color: #e0e0e0;
@@ -30,23 +34,26 @@
             font-size: 16px;
             margin: 5px 0;
             margin-bottom: 15px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, opacity 1s ease-out, transform 0.7s ease-out;
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 0.7s ease-out;
         }
+
         .dload.show {
             opacity: 1;
             transform: translateY(0);
         }
+
         .dload:hover {
             background-color: #df6d6d;
             color: #e0e0e0;
         }
+
         .dload img.icon {
             height: 40px;
             margin-right: 10px;
         }
+
         .screenshot {
             width: 90%;
             opacity: 0;
@@ -62,9 +69,11 @@
         main {
             text-align: center;
         }
+
         .hidden {
             display: none;
         }
+
         .show-more-btn {
             background-color: #77a6b4;
             color: #FFFFFF;
@@ -75,14 +84,34 @@
             cursor: pointer;
             margin: 20px 0;
         }
+
+        #wordClock {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.5;
+            color: #F3DE2C;
+            max-width: 400px;
+            display: inline-flex;
+            align-items: center;
+            background-color: #222222;
+            border-radius: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div id="header-container"></div>
     <main>
         <div>
             <img src="word clock.png" alt="" width="400" height="400">
-            <h2>word clock is a tiny little extension for safari, chrome, edge, opera, firefox, and brave. tell the time with a click.</h2>
+            <br>
+            <div id="wordClock"></div>
+            <br>
+            <br>
+            <br>
+            <h2>word clock is a tiny little extension for<br>safari, chrome, edge, opera, firefox, and brave.<br>tell
+                the time with a click.</h2>
             <br>
             <img src="safari screenshot.png" alt="word clock in safari" class="screenshot" id="safari1">
             <img src="chrome screenshot.png" alt="word clock in chrome" class="screenshot" id="chrome1">
@@ -92,30 +121,31 @@
             <img src="firefox screenshot.png" alt="word clock in firefox" class="screenshot" id="firefox1">
             <br><br><br>
             <div class="btn">
-            <a href="word clock.app.zip" download class="dload" id="download-safari">
-                <img src="safari.png" alt="safari" class="icon">
-                <b>download word clock for safari</b>
-            </a>
-            <a href="word clock chrome.zip" download class="dload" id="download-chrome">
-                <img src="chrome.png" alt="chrome" class="icon">
-                <b>download word clock for chrome</b>
-            </a>
-            <a href="word clock edge.zip" download class="dload" id="download-edge">
-                <img src="edge.png" alt="edge" class="icon">
-                <b>download word clock for edge</b>
-            </a>
-            <a href="word clock opera.zip" download class="dload" id="download-opera">
-                <img src="opera.png" alt="opera" class="icon">
-                <b>download word clock for opera</b>
-            </a>
-            <a href="word clock brave.zip" download class="dload" id="download-brave">
-                <img src="brave.png" alt="brave" class="icon">
-                <b>download word clock for brave</b>
-            </a>
-            <a href="https://addons.mozilla.org/en-US/firefox/addon/word-clock/" class="dload" id="download-firefox">
-                <img src="firefox.png" alt="firefox" class="icon">
-                <b>get word clock for firefox</b>
-            </a> 
+                <a href="word clock.app.zip" download class="dload" id="download-safari">
+                    <img src="safari.png" alt="safari" class="icon">
+                    <b>download word clock for safari</b>
+                </a>
+                <a href="word clock chrome.zip" download class="dload" id="download-chrome">
+                    <img src="chrome.png" alt="chrome" class="icon">
+                    <b>download word clock for chrome</b>
+                </a>
+                <a href="word clock edge.zip" download class="dload" id="download-edge">
+                    <img src="edge.png" alt="edge" class="icon">
+                    <b>download word clock for edge</b>
+                </a>
+                <a href="word clock opera.zip" download class="dload" id="download-opera">
+                    <img src="opera.png" alt="opera" class="icon">
+                    <b>download word clock for opera</b>
+                </a>
+                <a href="word clock brave.zip" download class="dload" id="download-brave">
+                    <img src="brave.png" alt="brave" class="icon">
+                    <b>download word clock for brave</b>
+                </a>
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/word-clock/" class="dload"
+                    id="download-firefox">
+                    <img src="firefox.png" alt="firefox" class="icon">
+                    <b>get word clock for firefox</b>
+                </a>
             </div>
             <br><br>
             <button class="show-more-btn" onclick="showAllDownloads()">show other downloads</button>
@@ -124,14 +154,27 @@
             <h2>to install word clock on macOS for safari:</h2>
             <p>first, unzip the <b>word clock.app.zip</b> file by double clicking on it,
                 <br>then drag the <b>word clock.app</b> file you unzipped into your applications folder.<br>
-            next, control-click (right-click) on <b>word clock.app</b> and select "open anyway"
-            <br>if prompted to launch word clock and follow the steps in the app to install it as a safari extension.</p>
+                next, control-click (right-click) on <b>word clock.app</b> and select "open anyway"
+                <br>if prompted to launch word clock and follow the steps in the app to install it as a safari
+                extension.
+            </p>
             <h2>to install word clock on chrome, edge, opera, or brave:</h2>
-            <p>download the respective file for your browser and unzip it,<br>then open your extensions page on chrome, edge, opera, or brave.
-                <br>(this is typically done by typing your browser name,<br>then <b>://extensions</b>, as in <b>chrome://extensions</b>), or by opening<br>your browser's sidebar and selecting <b>extensions</b> from the drop-down menu.
-                <br>enable developer mode (temporarily) and drag and drop the<br>word clock folder into the extensions page.<br>
-                <br>you can safely disable developer mode once word clock is installed.<br>your browser might show an alert, saying that it<br>"can't verify where this extension comes from",<br>but you can silence it by clicking the three dots
-                <br>next to the alert and selecting <b>keep this extension</b>.<br><br>last but not least, turn word clock on,<br>pin it to your browser's toolbar for the best experience, and tell the time with a click.</p>
+            <p>download the respective file for your browser and unzip it,<br>then open your extensions page on chrome,
+                edge, opera, or brave.
+                <br>(this is typically done by typing your browser name,<br>then <b>://extensions</b>, as in
+                <b>chrome://extensions</b>), or by opening<br>your browser's sidebar and selecting <b>extensions</b>
+                from the drop-down menu.
+                <br><b>enable developer mode</b> (temporarily) and drag and drop the<br>word clock folder into the
+                extensions page.<br>
+                (alternatively, you can click <b>load unpacked</b> and select the
+                <br>word clock folder instead.)
+                <br>
+                <br>you can safely disable developer mode once word clock is installed.<br>your browser might show an
+                alert, saying that it<br>"can't verify where this extension comes from",<br>but you can silence it by
+                clicking the three dots
+                <br>next to the alert and selecting <b>keep this extension</b>.<br><br>last but not least, turn word
+                clock on,<br>pin it to your browser's toolbar for the best experience, and tell the time with a click.
+            </p>
         </div>
     </main>
     <footer>
@@ -198,9 +241,14 @@
                 firefox1.classList.remove('hidden');
                 firefox1.classList.add('show');
             }
+            else {
+                showAllDownloads()
+                safari1.classList.remove('hidden');
+                safari1.classList.add('show');
+            }
         }
 
-    
+
         function showAllDownloads() {
             var downloadButtons = document.querySelectorAll('.dload');
             downloadButtons.forEach(button => {
@@ -209,14 +257,15 @@
             });
             document.querySelector('.show-more-btn').style.display = 'none';
         }
-    
-        window.onload = function() {
+
+
+        window.onload = function () {
             detectBrowser();
             var downloadButtons = document.querySelectorAll('.dload');
             var options = {
                 threshold: 0.5
             };
-            var observer = new IntersectionObserver(function(entries, observer) {
+            var observer = new IntersectionObserver(function (entries, observer) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('show');
@@ -224,13 +273,71 @@
                     }
                 });
             }, options);
-    
+
             downloadButtons.forEach(button => {
                 observer.observe(button);
             });
         };
-    </script>    
+    </script>
+    <script>
+        function numberToWords(number) {
+            const words = [
+                'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+                'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen',
+                'twenty', 'twenty-one', 'twenty-two', 'twenty-three', 'twenty-four', 'twenty-five', 'twenty-six',
+                'twenty-seven', 'twenty-eight', 'twenty-nine', 'thirty', 'thirty-one', 'thirty-two', 'thirty-three',
+                'thirty-four', 'thirty-five', 'thirty-six', 'thirty-seven', 'thirty-eight', 'thirty-nine',
+                'forty', 'forty-one', 'forty-two', 'forty-three', 'forty-four', 'forty-five', 'forty-six',
+                'forty-seven', 'forty-eight', 'forty-nine', 'fifty', 'fifty-one', 'fifty-two', 'fifty-three',
+                'fifty-four', 'fifty-five', 'fifty-six', 'fifty-seven', 'fifty-eight', 'fifty-nine'
+            ];
+            return words[number];
+        }
+
+        function getOrdinalSuffix(number) {
+            if (number >= 1 && number <= 31) {
+                const suffixes = [
+                    'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth',
+                    'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth',
+                    'twentieth', 'twenty-first', 'twenty-second', 'twenty-third', 'twenty-fourth', 'twenty-fifth',
+                    'twenty-sixth', 'twenty-seventh', 'twenty-eighth', 'twenty-ninth', 'thirtieth', 'thirty-first'
+                ];
+                return suffixes[number - 1];
+            }
+            return numberToWords(number);
+        }
+
+        function getCurrentTimeInWords() {
+            const now = new Date();
+
+            let hour = now.getHours();
+            const minute = now.getMinutes();
+            const day = now.toLocaleString('default', { weekday: 'long' }).toLowerCase();
+            const month = now.toLocaleString('default', { month: 'long' }).toLowerCase();
+            const dayOfMonth = now.getDate();
+
+            const period = hour >= 12 ? 'PM' : 'AM';
+            hour = hour % 12 || 12;
+
+            const hourInWords = numberToWords(hour);
+            const minuteInWords = minute === 0 ? "o'clock" : minute < 10 ? `oh ${numberToWords(minute)}` : numberToWords(minute);
+            const dayOfMonthInWords = getOrdinalSuffix(dayOfMonth);
+
+            return `it's ${hourInWords} ${minuteInWords} on ${day}, ${month} ${dayOfMonthInWords}.`;
+        }
+
+        function updateClock() {
+            const clockElement = document.getElementById('wordClock');
+            clockElement.textContent = getCurrentTimeInWords();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateClock();
+            setInterval(updateClock, 500);
+        });
+    </script>
     <script src="header.js"></script>
-    <script src="firebaseconfig.js"></script>
+    <script type="module" src="firebaseconfig.js"></script>
 </body>
+
 </html>
