@@ -49,7 +49,16 @@
         }
         .screenshot {
             width: 90%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 0.7s ease-out;
         }
+
+        .screenshot.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         main {
             text-align: center;
         }
@@ -75,7 +84,12 @@
             <img src="word clock.png" alt="" width="400" height="400">
             <h2>word clock is a tiny little extension for safari, chrome, edge, opera, firefox, and brave. tell the time with a click.</h2>
             <br>
-            <img src="word clock screen.png" alt="a screenshot showing word clock at work in the safari web browser. in a popup window below the word clock icon in the safari toolbar, it reads 'it's seven forty-nine on monday, august twenty-sixth.'" class="screenshot">
+            <img src="safari screenshot.png" alt="word clock in safari" class="screenshot" id="safari1">
+            <img src="chrome screenshot.png" alt="word clock in chrome" class="screenshot" id="chrome1">
+            <img src="edge screenshot.png" alt="word clock in edge" class="screenshot" id="edge1">
+            <img src="opera screenshot.png" alt="word clock in opera" class="screenshot" id="opera1">
+            <img src="brave screenshot.png" alt="word clock in brave" class="screenshot" id="brave1">
+            <img src="firefox screenshot.png" alt="word clock in firefox" class="screenshot" id="firefox1">
             <br><br><br>
             <div class="btn">
             <a href="word clock.app.zip" download class="dload" id="download-safari">
@@ -132,36 +146,60 @@
             var opera = document.getElementById('download-opera');
             var brave = document.getElementById('download-brave');
             var firefox = document.getElementById('download-firefox');
-    
+            var safari1 = document.getElementById('safari1');
+            var chrome1 = document.getElementById('chrome1');
+            var edge1 = document.getElementById('edge1');
+            var opera1 = document.getElementById('opera1');
+            var brave1 = document.getElementById('brave1');
+            var firefox1 = document.getElementById('firefox1');
+
             safari.classList.add('hidden');
             chrome.classList.add('hidden');
             edge.classList.add('hidden');
             opera.classList.add('hidden');
             brave.classList.add('hidden');
             firefox.classList.add('hidden');
-    
+            safari1.classList.add('hidden');
+            chrome1.classList.add('hidden');
+            edge1.classList.add('hidden');
+            opera1.classList.add('hidden');
+            brave1.classList.add('hidden');
+            firefox1.classList.add('hidden');
+
             var isOpera = (userAgent.includes('opera') || userAgent.includes('opr')) || (!!window.opr && !!opr.addons);
             var isEdgeChromium = userAgent.includes('edg');
             var isBrave = (navigator.brave && navigator.brave.isBrave) || userAgent.includes('brave');
             var isSafari = userAgent.includes('safari') && !userAgent.includes('chrome');
             var isChrome = userAgent.includes('chrome') && !isOpera && !isEdgeChromium && !isBrave;
             var isFirefox = userAgent.includes('firefox') && !isOpera && !isEdgeChromium && !isBrave && !isChrome;
-    
+
             if (isSafari) {
                 safari.classList.remove('hidden');
+                safari1.classList.remove('hidden');
+                safari1.classList.add('show');
             } else if (isChrome) {
                 chrome.classList.remove('hidden');
+                chrome1.classList.remove('hidden');
+                chrome1.classList.add('show');
             } else if (isEdgeChromium) {
                 edge.classList.remove('hidden');
+                edge1.classList.remove('hidden');
+                edge1.classList.add('show');
             } else if (isOpera) {
                 opera.classList.remove('hidden');
+                opera1.classList.remove('hidden');
+                opera1.classList.add('show');
             } else if (isBrave) {
                 brave.classList.remove('hidden');
-            }
-            else if (isFirefox) {
+                brave1.classList.remove('hidden');
+                brave1.classList.add('show');
+            } else if (isFirefox) {
                 firefox.classList.remove('hidden');
+                firefox1.classList.remove('hidden');
+                firefox1.classList.add('show');
             }
         }
+
     
         function showAllDownloads() {
             var downloadButtons = document.querySelectorAll('.dload');
