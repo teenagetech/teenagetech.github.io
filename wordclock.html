@@ -99,6 +99,9 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+        .space{
+            height: 40px;
+        }
     </style>
 </head>
 
@@ -121,7 +124,15 @@
             <img src="opera screenshot.png" alt="word clock in opera" class="screenshot" id="opera1">
             <img src="brave screenshot.png" alt="word clock in brave" class="screenshot" id="brave1">
             <img src="firefox screenshot.png" alt="word clock in firefox" class="screenshot" id="firefox1">
-            <br><br><br>
+            <br>
+            <a href="https://chromewebstore.google.com/detail/word-clock/epdjklohfglcjmnfgimekcpdjbjhapih" class="dload" id="download-webstore">
+                <img src="webstore.png" alt="chrome webstore" class="icon">
+                <b>get word clock on the<br>chrome webstore</b>
+            </a>
+            <br>
+            <b>(recommended)<br>or</b>
+            <div class="space"></div>
+            
             <div class="btn">
                 <a href="word clock.app.zip" download class="dload" id="download-safari">
                     <img src="safari.png" alt="safari" class="icon">
@@ -150,7 +161,7 @@
                 </a>
             </div>
             <br><br>
-            <button class="show-more-btn" onclick="showAllDownloads()">show other downloads</button>
+            <button class="show-more-btn" onclick="showAllDownloads()">show other options</button>
 
             <br><br><br>
             <h2>to install word clock on macOS for safari:</h2>
@@ -199,6 +210,8 @@
             var opera1 = document.getElementById('opera1');
             var brave1 = document.getElementById('brave1');
             var firefox1 = document.getElementById('firefox1');
+            var webstore = document.getElementById('download-webstore');
+
 
             safari.classList.add('hidden');
             chrome.classList.add('hidden');
@@ -212,6 +225,7 @@
             opera1.classList.add('hidden');
             brave1.classList.add('hidden');
             firefox1.classList.add('hidden');
+            webstore.classList.add('hidden');
 
             var isOpera = (userAgent.includes('opera') || userAgent.includes('opr')) || (!!window.opr && !!opr.addons);
             var isEdgeChromium = userAgent.includes('edg');
@@ -228,18 +242,22 @@
                 chrome.classList.remove('hidden');
                 chrome1.classList.remove('hidden');
                 chrome1.classList.add('show');
+                webstore.classList.remove('hidden');
             } else if (isEdgeChromium) {
                 edge.classList.remove('hidden');
                 edge1.classList.remove('hidden');
                 edge1.classList.add('show');
+                webstore.classList.remove('hidden');
             } else if (isOpera) {
                 opera.classList.remove('hidden');
                 opera1.classList.remove('hidden');
                 opera1.classList.add('show');
+                webstore.classList.remove('hidden');
             } else if (isBrave) {
                 brave.classList.remove('hidden');
                 brave1.classList.remove('hidden');
                 brave1.classList.add('show');
+                webstore.classList.remove('hidden');
             } else if (isFirefox) {
                 firefox.classList.remove('hidden');
                 firefox1.classList.remove('hidden');
