@@ -99,9 +99,6 @@
             padding-left: 10px;
             padding-right: 10px;
         }
-        .space{
-            height: 40px;
-        }
     </style>
 </head>
 
@@ -131,7 +128,7 @@
             </a>
             <br>
             <b id="option">(recommended)<br>or</b>
-            <div class="space" id="space"></div>
+            <div id="space" style="height: 40px;"></div>
             
             <div class="btn">
                 <a href="word clock.app.zip" download class="dload" id="download-safari">
@@ -154,8 +151,7 @@
                     <img src="brave.png" alt="brave" class="icon">
                     <b>download word clock for brave</b>
                 </a>
-                <a href="https://addons.mozilla.org/en-US/firefox/addon/word-clock/" class="dload"
-                    id="download-firefox">
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/word-clock/" class="dload" id="download-firefox">
                     <img src="firefox.png" alt="firefox" class="icon">
                     <b>get word clock for firefox</b>
                 </a>
@@ -287,13 +283,17 @@
 
 
         function showAllDownloads() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var isSafari = userAgent.includes('safari') && !userAgent.includes('chrome');
+            var isFirefox = userAgent.includes('firefox') && !isOpera && !isEdgeChromium && !isBrave && !isChrome;
             var downloadButtons = document.querySelectorAll('.dload');
             downloadButtons.forEach(button => {
                 button.classList.remove('hidden');
                 button.classList.add('show');
             });
             space.classList.remove('show')
-            
+            space.classList.add('hidden')
+
             document.querySelector('.show-more-btn').style.display = 'none';
             if (isSafari || isFirefox) {
                 option.classList.remove('show');
