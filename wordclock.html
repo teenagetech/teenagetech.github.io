@@ -130,8 +130,8 @@
                 <b>get word clock on the<br>chrome webstore</b>
             </a>
             <br>
-            <b>(recommended)<br>or</b>
-            <div class="space"></div>
+            <b id="option">(recommended)<br>or</b>
+            <div class="space" id="space"></div>
             
             <div class="btn">
                 <a href="word clock.app.zip" download class="dload" id="download-safari">
@@ -211,6 +211,8 @@
             var brave1 = document.getElementById('brave1');
             var firefox1 = document.getElementById('firefox1');
             var webstore = document.getElementById('download-webstore');
+            var option = document.getElementById('option');
+            var space = document.getElementById('space');
 
 
             safari.classList.add('hidden');
@@ -226,6 +228,8 @@
             brave1.classList.add('hidden');
             firefox1.classList.add('hidden');
             webstore.classList.add('hidden');
+            option.classList.add('hidden');
+            space.classList.add('show');
 
             var isOpera = (userAgent.includes('opera') || userAgent.includes('opr')) || (!!window.opr && !!opr.addons);
             var isEdgeChromium = userAgent.includes('edg');
@@ -238,30 +242,41 @@
                 safari.classList.remove('hidden');
                 safari1.classList.remove('hidden');
                 safari1.classList.add('show');
+                option.classList.add('hidden');
             } else if (isChrome) {
                 chrome.classList.remove('hidden');
                 chrome1.classList.remove('hidden');
                 chrome1.classList.add('show');
                 webstore.classList.remove('hidden');
+                option.classList.remove('hidden');
+                option.classList.add('show');
             } else if (isEdgeChromium) {
                 edge.classList.remove('hidden');
                 edge1.classList.remove('hidden');
                 edge1.classList.add('show');
                 webstore.classList.remove('hidden');
+                option.classList.remove('hidden');
+                option.classList.add('show');
             } else if (isOpera) {
                 opera.classList.remove('hidden');
                 opera1.classList.remove('hidden');
                 opera1.classList.add('show');
                 webstore.classList.remove('hidden');
+                option.classList.remove('hidden');
+                option.classList.add('show');
             } else if (isBrave) {
                 brave.classList.remove('hidden');
                 brave1.classList.remove('hidden');
                 brave1.classList.add('show');
                 webstore.classList.remove('hidden');
+                option.classList.remove('hidden');
+                option.classList.add('show');
             } else if (isFirefox) {
                 firefox.classList.remove('hidden');
                 firefox1.classList.remove('hidden');
                 firefox1.classList.add('show');
+                option.classList.add('hidden');
+                webstore.classList.add('hidden');
             }
             else {
                 showAllDownloads()
@@ -277,7 +292,13 @@
                 button.classList.remove('hidden');
                 button.classList.add('show');
             });
+            space.classList.remove('show')
+            
             document.querySelector('.show-more-btn').style.display = 'none';
+            if (isSafari || isFirefox) {
+                option.classList.remove('show');
+                option.classList.add('hidden');
+            }
         }
 
 
