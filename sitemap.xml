@@ -3,14 +3,19 @@
     <url>
         <loc>https://teenagetech.github.io/home</loc>
         <lastmod>2024-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+        <loc>https://teenagetech.github.io/wordclock</loc>
+        <lastmod>2024-07-28</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://teenagetech.github.io/xplore</loc>
         <lastmod>2024-07-28</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://teenagetech.github.io/xploredownload</loc>
@@ -18,8 +23,14 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-        <url>
+    <url>
         <loc>https://teenagetech.github.io/teenagetechgames</loc>
+        <lastmod>2024-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://teenagetech.github.io/mouseman</loc>
         <lastmod>2024-07-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -27,14 +38,14 @@
     <url>
         <loc>https://teenagetech.github.io/xploretipstricks</loc>
         <lastmod>2024-05-07</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://teenagetech.github.io/about</loc>
         <lastmod>2024-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://teenagetech.github.io/support</loc>
@@ -46,6 +57,6 @@
         <loc>https://teenagetech.github.io/License.pdf</loc>
         <lastmod>2024-07-28</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.2</priority>
     </url>
 </urlset>
