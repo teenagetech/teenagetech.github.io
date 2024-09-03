@@ -121,20 +121,18 @@
             <img src="opera screenshot.png" alt="word clock in opera" class="screenshot" id="opera1">
             <img src="brave screenshot.png" alt="word clock in brave" class="screenshot" id="brave1">
             <img src="firefox screenshot.png" alt="word clock in firefox" class="screenshot" id="firefox1">
-            <br>
-            <a href="https://chromewebstore.google.com/detail/word-clock/epdjklohfglcjmnfgimekcpdjbjhapih" class="dload" id="download-webstore">
-                <img src="webstore.png" alt="chrome webstore" class="icon">
-                <b>get word clock on the<br>chrome webstore</b>
-            </a>
-            <br>
-            <b id="option">(recommended)<br>or</b>
-            <div id="space" style="height: 40px;"></div>
-            
+            <br><br><br>
             <div class="btn">
                 <a href="word clock.app.zip" download class="dload" id="download-safari">
                     <img src="safari.png" alt="safari" class="icon">
                     <b>download word clock for safari</b>
                 </a>
+                <a href="https://chromewebstore.google.com/detail/word-clock/epdjklohfglcjmnfgimekcpdjbjhapih" class="dload" id="download-webstore">
+                    <img src="webstore.png" alt="chrome webstore" class="icon">
+                    <b>get word clock on the chrome webstore</b>
+                </a>
+                <b id="option">(recommended)<br>or</b>
+                <div id="space" style="height: 40px;"></div>
                 <a href="word clock chrome.zip" download class="dload" id="download-chrome">
                     <img src="chrome.png" alt="chrome" class="icon">
                     <b>download word clock for chrome</b>
@@ -153,7 +151,7 @@
                 </a>
                 <a href="https://addons.mozilla.org/en-US/firefox/addon/word-clock/" class="dload" id="download-firefox">
                     <img src="firefox.png" alt="firefox" class="icon">
-                    <b>get word clock for firefox</b>
+                    <b>get word clock for firefox<br>on the firefox add-ons store</b>
                 </a>
             </div>
             <br><br>
@@ -293,12 +291,10 @@
             });
             space.classList.remove('show')
             space.classList.add('hidden')
+            option.classList.remove('show');
+            option.classList.add('hidden');
 
             document.querySelector('.show-more-btn').style.display = 'none';
-            if (isSafari || isFirefox) {
-                option.classList.remove('show');
-                option.classList.add('hidden');
-            }
         }
 
 
