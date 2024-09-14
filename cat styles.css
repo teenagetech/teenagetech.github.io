@@ -37,6 +37,12 @@ body {
   animation: fadeIn 0.8s ease-in-out;
 }
 
+#send-button:disabled {
+  background-color: #646464;
+  color: #fff;
+  cursor: not-allowed;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

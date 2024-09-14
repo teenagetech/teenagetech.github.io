@@ -39,13 +39,14 @@ function sendMessage() {
   const messageText = input.value.trim();
 
   if (messageText) {
-      addMessage(messageText, 'user-message');
-      saveChatHistory(messageText, 'user-message');
-      const catResponse = generateMeows(messageText);
-      addMessage(catResponse, 'cat-message');
-      saveChatHistory(catResponse, 'cat-message');
+    addMessage(messageText, 'user-message');
+    saveChatHistory(messageText, 'user-message');
+    const catResponse = generateMeows(messageText);
+    addMessage(catResponse, 'cat-message');
+    saveChatHistory(catResponse, 'cat-message');
 
-      input.value = '';
+    input.value = '';
+    toggleSendButton();
   }
 }
 
@@ -126,3 +127,14 @@ function setFaviconAndLogo() {
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFaviconAndLogo);
 
 setFaviconAndLogo();
+
+function toggleSendButton() {
+  const input = document.getElementById('user-input');
+  const sendButton = document.getElementById('send-button');
+  if (input.value.trim() === '') {
+    sendButton.disabled = true;
+  } else {
+    sendButton.disabled = false;
+  }
+}
+document.getElementById('user-input').addEventListener('input', toggleSendButton);
