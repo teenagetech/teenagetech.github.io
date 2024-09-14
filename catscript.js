@@ -39,7 +39,7 @@ function sendMessage() {
 function addMessage(text, className) {
   const chatMessages = document.getElementById('chat-messages');
   const messageDiv = document.createElement('div');
-  messageDiv.className = `message ${className}`;
+  messageDiv.className = `message ${className} ${className === 'cat-message' ? 'fade-in' : ''}`;
   messageDiv.textContent = text;
   chatMessages.appendChild(messageDiv);
   chatMessages.scrollTop = chatMessages.scrollHeight;
