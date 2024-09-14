@@ -11,7 +11,6 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: 2px;
 }
-
 #chat-container {
   width: 90%;
   max-width: 500px;
@@ -33,24 +32,47 @@ body {
   padding: 10px;
   border-bottom: 1px solid #5A5A5A;
   background-color: #007bff;
-  color: #e0e0e0;
+  color: #fff;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 4;
+  font-family: 'Avenir Next', 'Avenir', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   transition: background-color 0.5s ease;
 }
 
+#chat-header .header-text {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  margin: 0 0 0 10px;
+}
+
+#chat-header img.ch-logo {
+  margin-right: -50px;
+}
+
+#chat-header .header-left {
+  display: flex;
+  align-items: center;
+}
+
+#chat-header .header-right {
+  display: flex;
+  gap: 10px;
+}
+
 #chat-header button {
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Avenir Next', 'Avenir', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #fdfdfd;
   border-radius: 20px;
   border: none;
   color: #007bff;
   cursor: pointer;
   font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color 0.5s ease;
 }
-
 #chat-window {
   flex: 1;
   overflow-y: auto;
@@ -100,7 +122,6 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   caret-color: #007bff;
-  
 }
 #chat-input :focus {
   outline: none;
@@ -119,12 +140,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 2px;
   height: 22px;
-}
-
-#chat-header .header-text {
-  font-weight: bold;
-  margin-left: -54px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #send-button {
@@ -138,10 +154,11 @@ body {
   font-size: 16px;
   transition: background-color 0.5s ease;
 }
+
 @media (max-width: 768px) {
   #chat-container {
     width: 100%;
-    height: 90%;
+    height: 85%;
   }
 
   #chat-header h1 {
@@ -152,7 +169,11 @@ body {
     font-size: 14px;
   }
 }
-
+@media (max-width: 480px) {
+  #chat-header img.ch-logo {
+    padding-right: 46px;
+  }
+}
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #2c2c2c;
@@ -165,6 +186,9 @@ body {
 
   #chat-header {
     color: #fff;
+  }
+  #chat-header .header-text {
+    color: #e0e0e0;
   }
 
   .user-message {
@@ -215,4 +239,128 @@ body.green-mode #chat-input :focus {
 }
 body.green-mode #chat-input {
   caret-color: #28a745;
+}
+
+.dropdown {
+  position: relative;
+  display: flexbox;
+  text-align: center;
+  }
+  
+  .dropdown-content {
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+  background: linear-gradient(45deg, #df6d6d, #77a6b4);
+  animation: headerAnimation 5s infinite;
+  background-size: 200% 200%;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  animation: fadeIn 0.75s;
+  padding: 4px;
+  min-width: 157px;
+  z-index: 3;
+  }
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('/Avenir\ Next.ttc') format('truetype collection');
+}
+  header {
+    font-family: 'Avenir Next', 'Avenir', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(45deg, #df6d6d, #77a6b4);
+    animation: headerAnimation 10s infinite;
+    background-size: 400% 400%;
+  }
+  header > nav > ul > li > a {
+    animation: fadeIn 0.75s;
+  }
+  footer > p {
+    animation: fadeIn 0.75s;
+  }
+  
+  footer {
+    color: #fff;
+    background: linear-gradient(45deg, #363636, #777777);
+    animation: footerAnimation 10s infinite;
+    background-size: 400% 400%;
+  }
+
+  @keyframes headerAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes footerAnimation {
+    0% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.dropdown-content a {
+color: #fff;
+text-decoration: none;
+display: flex;
+padding: 4px;
+text-align: center;
+}
+.dropdown-content a:hover {
+    background-color: #00000074;
+    border-radius: 5px;
+    text-align: center;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #77a6b4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+    font-family: 'Avenir Next', 'Avenir', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header {
+  height: 22px;
+  padding: 10px;
+  color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+}
+
+header nav ul  a {
+  margin-right: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
 }

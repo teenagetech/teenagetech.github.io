@@ -77,3 +77,23 @@ loadChatHistory();
 document.getElementById('toggle-mode').addEventListener('click', () => {
   document.body.classList.toggle('green-mode');
 });
+
+function setFaviconAndLogo() {
+  const favicon = document.getElementById('favicon');
+  const appleTouchIcon = document.getElementById('apple-touch-icon');
+  const chatLogo = document.getElementById('chat-logo');
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      favicon.href = 'DarkModeFavicon.ico';
+      appleTouchIcon.href = 'DarkModeFavicon.ico';
+      chatLogo.src = 'DarkModeHeader.png';
+  } else {
+      favicon.href = 'LightModeFavicon.ico';
+      appleTouchIcon.href = 'LightModeFavicon.ico';
+      chatLogo.src = 'LightModeHeader.png';
+  }
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFaviconAndLogo);
+
+setFaviconAndLogo();

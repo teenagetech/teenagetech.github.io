@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="CatChat.ico">
-    <link rel="apple-touch-icon" href="CatChat.ico">
+    <link id="favicon" rel="icon" href="LightModeFavicon.ico">
+    <link id="apple-touch-icon" rel="apple-touch-icon" href="LightModeFavicon.ico">
     <meta name="description" content="A fun feline chatbot. Talk to CatChat whenever, wherever.">
     <title>CatChat</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="header-container"></div>
     <div id="chat-container">
         <div id="chat-header">
-            <img src="CatChat.png" alt="CatChat Logo" width="40px">
+            <img id="chat-logo" src="DarkModeHeader.png" alt="CatChat Logo" class="ch-logo" width="40px">
             <h1 class="header-text">CatChat</h1>
-            <b><button id="toggle-mode"><b>Switch Colors</b></button></b>
+            <button id="toggle-mode"><b>Switch Colors</b></button>
             <button id="reset"><b>Clear Chat</b></button>
         </div>
         <div id="chat-window">
@@ -25,6 +26,11 @@
             <button id="send-button"><b>Send</b></button>
         </div>
     </div>
+    <footer>
+        <p>&copy; Teenage Tech. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
+    <script src="../header.js"></script>
+    <script type="module" src="../firebaseconfig.js"></script>
 </body>
 </html>
