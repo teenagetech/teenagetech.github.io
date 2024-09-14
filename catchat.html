@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="favicon" rel="icon" href="LightModeFavicon.ico">
+    <link id="favicon" rel="icon" href="DarkModeFavicon.ico">
     <link id="apple-touch-icon" rel="apple-touch-icon" href="DarkModeFavicon.ico">
     <meta name="description" content="A fun feline chatbot. Talk to CatChat whenever, wherever.">
     <title>CatChat</title>
@@ -13,10 +13,14 @@
     <div id="header-container"></div>
     <div id="chat-container">
         <div id="chat-header">
-            <img id="chat-logo" src="DarkModeHeader.png" alt="CatChat Logo" class="ch-logo" width="40px">
-            <h1 class="header-text">CatChat</h1>
-            <button id="toggle-mode"><b>Switch Colors</b></button>
-            <button id="reset"><b>Clear Chat</b></button>
+            <div class="header-left">
+                <img id="chat-logo" src="DarkModeHeader.png" alt="CatChat Logo" class="ch-logo" width="40px">
+                <h1 class="header-text">CatChat</h1>
+            </div>
+            <div class="header-right">
+                <button id="toggle-mode"><b>Switch Colors</b></button>
+                <button id="reset"><b>Clear Chat</b></button>
+            </div>
         </div>
         <div id="chat-window">
             <div id="chat-messages"></div>

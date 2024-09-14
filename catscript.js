@@ -1,4 +1,4 @@
-//script.js
+//catscript.js
 function generateMeows(userMessage) {
   const meows = Math.floor(Math.random() * 10) + 1;
   let meowSentence = '';
@@ -44,6 +44,25 @@ function addMessage(text, className) {
   chatMessages.appendChild(messageDiv);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
+function saveColorMode() {
+  const isGreenMode = document.body.classList.contains('green-mode');
+  localStorage.setItem('colorMode', isGreenMode ? 'green-mode' : 'light-mode');
+}
+
+function applySavedColorMode() {
+  const savedMode = localStorage.getItem('colorMode');
+  if (savedMode === 'green-mode') {
+    document.body.classList.add('green-mode');
+  } else {
+    document.body.classList.remove('green-mode');
+  }
+}
+document.getElementById('toggle-mode').addEventListener('click', () => {
+  document.body.classList.toggle('green-mode');
+  saveColorMode();
+});
+applySavedColorMode();
+
 
 function resetChat() {
   const chatMessages = document.getElementById('chat-messages');
@@ -74,23 +93,20 @@ document.getElementById('reset').addEventListener('click', resetChat);
 
 loadChatHistory();
 
-document.getElementById('toggle-mode').addEventListener('click', () => {
-  document.body.classList.toggle('green-mode');
-});
 
 function setFaviconAndLogo() {
   const favicon = document.getElementById('favicon');
   const appleTouchIcon = document.getElementById('apple-touch-icon');
   const chatLogo = document.getElementById('chat-logo');
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    favicon.href = 'LightModeFavicon.ico';
+    appleTouchIcon.href = 'LightModeFavicon.ico';
+    chatLogo.src = 'LightModeHeader.png';
+  } else {
       favicon.href = 'DarkModeFavicon.ico';
       appleTouchIcon.href = 'DarkModeFavicon.ico';
       chatLogo.src = 'DarkModeHeader.png';
-  } else {
-      favicon.href = 'LightModeFavicon.ico';
-      appleTouchIcon.href = 'LightModeFavicon.ico';
-      chatLogo.src = 'LightModeHeader.png';
   }
 }
 
