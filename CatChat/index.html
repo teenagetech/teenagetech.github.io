@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="CatChat.ico">
+    <link rel="apple-touch-icon" href="CatChat.ico">
+    <meta name="description" content="A fun feline chatbot. Talk to CatChat whenever, wherever.">
+    <title>CatChat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">
+            <img src="CatChat.png" alt="CatChat Logo" width="40px">
+            <h1 class="header-text">CatChat</h1>
+            <b><button id="toggle-mode"><b>Switch Colors</b></button></b>
+            <button id="reset"><b>Clear Chat</b></button>
+        </div>
+        <div id="chat-window">
+            <div id="chat-messages"></div>
+        </div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="CatChat…" autocapitalize="on" spellcheck="true" contenteditable="true">
+            <button id="send-button"><b>Send</b></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

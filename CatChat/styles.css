@@ -1,0 +1,218 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eeeeee;
+  transition: background-color 0.5s ease;
+  scroll-behavior: smooth;
+  scrollbar-width: 2px;
+}
+
+#chat-container {
+  width: 90%;
+  max-width: 500px;
+  height: 80%;
+  max-height: 700px;
+  border: 1px solid #5A5A5A;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+#chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #5A5A5A;
+  background-color: #007bff;
+  color: #e0e0e0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: background-color 0.5s ease;
+}
+
+#chat-header button {
+  font-family: 'Avenir', sans-serif;
+  background: #fdfdfd;
+  border-radius: 20px;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 1px solid #5A5A5A;
+}
+
+#chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 5px 0;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  max-width: 80%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 2px;
+  transition: background-color 0.5s ease;
+}
+
+.cat-message {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  color: #000;
+  padding: 5px 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 2px;
+  max-width: 80%;
+}
+
+#chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #5A5A5A;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  caret-color: #007bff;
+  
+}
+#chat-input :focus {
+  outline: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  border: 3px solid #007bff;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #5A5A5A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 2px;
+  height: 22px;
+}
+
+#chat-header .header-text {
+  font-weight: bold;
+  margin-left: -54px;
+  font-size: 24px;
+}
+
+#send-button {
+  padding: 10px 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+@media (max-width: 768px) {
+  #chat-container {
+    width: 100%;
+    height: 90%;
+  }
+
+  #chat-header h1 {
+    font-size: 18px;
+  }
+
+  #send-button {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2c2c2c;
+  }
+
+  #chat-container {
+    background-color: #333;
+    border-color: #555;
+  }
+
+  #chat-header {
+    color: #fff;
+  }
+
+  .user-message {
+    background-color: #1a73e8;
+  }
+
+  .cat-message {
+    background-color: #555;
+    color: #fff;
+  }
+
+  #chat-input {
+    background-color: #444;
+    caret-color: #1a73e8;
+  }
+  #chat-input :focus {
+    border: 3px solid #1a73e8;
+  }
+
+  #user-input {
+    background-color: #555;
+    color: #fff;
+    border-color: #666;
+  }
+
+  #send-button {
+    background-color: #1a73e8;
+  }
+}
+
+body.green-mode #chat-header {
+  background-color: #28a745;
+}
+
+body.green-mode .user-message {
+  background-color: #28a745;
+}
+
+body.green-mode #send-button {
+  background-color: #28a745;
+}
+
+body.green-mode #chat-header button {
+  color: #28a745;
+}
+body.green-mode #chat-input :focus {
+  border: 3px solid #28a745;
+}
+body.green-mode #chat-input {
+  caret-color: #28a745;
+}
