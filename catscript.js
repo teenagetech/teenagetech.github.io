@@ -4,22 +4,35 @@ function generateMeows(userMessage) {
   let meowSentence = '';
   const punctuation = ['.', '!', '?', ',', ''];
 
+  let capitalizeNext = true;
+
   for (let i = 0; i < meows; i++) {
+    if (capitalizeNext) {
       meowSentence += 'Meow';
-      if (i < meows - 1) {
-          meowSentence += punctuation[Math.floor(Math.random() * punctuation.length)] + ' ';
-      } else {
-          const lastChar = userMessage.slice(-1);
-          if (lastChar === '?') {
-              meowSentence += punctuation[Math.floor(Math.random() * 2)];
-          } else {
-              meowSentence += punctuation[Math.floor(Math.random() * 3)];
-          }
+      capitalizeNext = false;
+    } else {
+      meowSentence += 'meow';
+    }
+
+    if (i < meows - 1) {
+      const randomPunctuation = punctuation[Math.floor(Math.random() * punctuation.length)];
+      meowSentence += randomPunctuation + ' ';
+      if (['.', '!', '?'].includes(randomPunctuation)) {
+        capitalizeNext = true;
       }
+    } else {
+      const lastChar = userMessage.slice(-1);
+      if (lastChar === '?') {
+        meowSentence += punctuation[Math.floor(Math.random() * 2)];
+      } else {
+        meowSentence += punctuation[Math.floor(Math.random() * 3)];
+      }
+    }
   }
 
   return meowSentence.trim();
 }
+
 
 function sendMessage() {
   const input = document.getElementById('user-input');
