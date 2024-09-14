@@ -108,11 +108,14 @@ body {
   flex-direction: column;
   overflow-y: auto;
   flex: 1;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 
 .message {
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 .user-message {
