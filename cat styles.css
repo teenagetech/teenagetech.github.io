@@ -177,7 +177,7 @@ body {
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   box-sizing: border-box;
   transition: background-color 0.5s ease;
 }
@@ -193,7 +193,7 @@ body {
 
 @media (max-width: 600px) {
   #chat-container {
-    width: 100%;
+    width: 98%;
   }
 
   #chat-header h1 {
@@ -201,7 +201,7 @@ body {
   }
 
   #send-button {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
