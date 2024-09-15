@@ -38,7 +38,7 @@ body {
 }
 
 #send-button:disabled {
-  background-color: #646464;
+  background-color: #646464 !important;
   color: #fff;
   cursor: not-allowed;
 }
