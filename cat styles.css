@@ -40,7 +40,6 @@ body {
 #send-button:disabled {
   background-color: #646464 !important;
   color: #fff;
-  cursor: not-allowed;
 }
 
 @keyframes fadeIn {
