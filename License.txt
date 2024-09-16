@@ -1,0 +1,20 @@
+Teenage Tech Website License
+
+Copyright (c) 2024 Teenage Tech
+
+All rights reserved.
+
+This website, including all its content, code, design, and associated files (collectively referred to as "the Website"), is the exclusive property of Teenage Tech. No part of this Website may be reproduced, distributed, modified, adapted, transformed, built upon, or used in any manner whatsoever without the express written permission of Teenage Tech.
+
+Prohibited actions include, but are not limited to:
+1. Copying, duplicating, or replicating any part of the Website's code or content.
+2. Altering, modifying, or adapting any aspect of the Website.
+3. Creating derivative works based on any part of the Website.
+4. Reverse engineering, decompiling, or disassembling any portion of the Website.
+5. Using any part of the Website for commercial or non-commercial purposes without explicit permission.
+
+Any use, reproduction, distribution, or modification of the Website without prior written consent from Teenage Tech is strictly prohibited and may result in severe civil and criminal penalties.
+
+For permissions or inquiries, please contact Teenage Tech at [contact information].
+
+All other rights not expressly granted herein are reserved by Teenage Tech.
