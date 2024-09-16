@@ -74,10 +74,6 @@ body {
   margin: 0 0 0 6px;
 }
 
-#chat-header img.ch-logo {
-  margin-right: 10px;
-}
-
 #chat-header .header-left {
   display: flex;
   align-items: center;
