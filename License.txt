@@ -15,6 +15,6 @@ Prohibited actions include, but are not limited to:
 
 Any use, reproduction, distribution, or modification of the Website without prior written consent from Teenage Tech is strictly prohibited and may result in severe civil and criminal penalties.
 
-For permissions or inquiries, please contact Teenage Tech at [contact information].
+For permissions or inquiries, please contact Teenage Tech at https://teenagetech.github.io/support.
 
 All other rights not expressly granted herein are reserved by Teenage Tech.
