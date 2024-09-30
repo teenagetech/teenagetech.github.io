@@ -27,6 +27,15 @@ font: size 34px;">The page you tried to visit has been moved or deleted.</p>
 <footer>
     <p>&copy; Teenage Tech. All rights reserved.</p>
 </footer>
+    <script>
+        window.onload = () => {
+            thisurl = window.location.href;
+            lowercaseurl = thisurl.toLowerCase();
+            if (thisurl != lowercaseurl) {
+                location.replace(lowercaseurl);
+            }
+        };
+    </script>
     <script src="header.js"></script>
     <script type="module" src="firebaseconfig.js"></script>
 </body>
