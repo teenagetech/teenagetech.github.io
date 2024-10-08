@@ -7,6 +7,24 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://teenagetech.github.io/owen/home</loc>
+        <lastmod>2024-10-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://teenagetech.github.io/owen/photography</loc>
+        <lastmod>2024-10-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://teenagetech.github.io/owen/dev</loc>
+        <lastmod>2024-10-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://teenagetech.github.io/wordclock</loc>
         <lastmod>2024-09-14</lastmod>
         <changefreq>weekly</changefreq>
