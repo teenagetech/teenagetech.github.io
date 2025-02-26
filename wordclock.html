@@ -127,7 +127,7 @@
             <div class="btn">
                 <a href="word clock.app.zip" download class="dload" id="download-safari">
                     <img src="safari.png" alt="safari" class="icon">
-                    <b>download word clock for safari (unstable)</b>
+                    <b><s>download word clock for safari (unstable)</s><br>isn't supported yet :(</b>
                 </a>
                 <a href="https://chromewebstore.google.com/detail/word-clock/epdjklohfglcjmnfgimekcpdjbjhapih" class="dload" id="download-webstore">
                     <img src="webstore.png" alt="chrome webstore" class="icon">
@@ -165,7 +165,7 @@
                 <br>then drag the <b>word clock.app</b> file you unzipped into your applications folder.<br>
             <h3>if you're running macOS seqouia:</h3>
             try to open the word clock app from the launchpad<br>
-            (you will be greeted by dialouge saying "Apple could not verify “word clock” is<br>
+            (you will be greeted by dialogue stating that "Apple could not verify “word clock” is<br>
             free of malware that may harm your Mac or compromise your privacy."<br>
             however, this is normal, and isn't correct, but the new security features in<br>
             macOS sequoia block it anyway.)<br>
@@ -179,7 +179,7 @@
             <h3>if you're not running macOS sequoia:</h3>
                 next, control-click (right-click) on <b>word clock.app</b> and select "Open"
                 <br>(you can ignore the warning dialogue)<br>
-                <br>enter your passoword (if prompted) to launch word clock and follow the steps<br>
+                <br>enter your password (if prompted) to launch word clock and follow the steps<br>
                 in the app to install it as a safari extension.
             </p>
             <h2>to install word clock on chrome, edge, opera, or brave:</h2>
@@ -375,7 +375,7 @@
             hour = hour % 12 || 12;
 
             const hourInWords = numberToWords(hour);
-            const minuteInWords = minute === 0 ? "o'clock" : minute < 10 ? `oh ${numberToWords(minute)}` : numberToWords(minute);
+            const minuteInWords = minute < 10 ? "oh " + numberToWords(minute) : numberToWords(minute);
             const dayOfMonthInWords = getOrdinalSuffix(dayOfMonth);
 
             return `it's ${hourInWords} ${minuteInWords} on ${day}, ${month} ${dayOfMonthInWords}.`;
